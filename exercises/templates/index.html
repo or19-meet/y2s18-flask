@@ -5,8 +5,25 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
       </head>
         <body>
-            <h1> football</h1>
-            <p> because I like football players</p>
+        <div>
+            <h1> FOOTBALL</h1>
+            <p> Because I like football players</p>
+        </div>
+        <div>
+            <h2> Favourite players:</h2>
+            {%if like_some_sport == True%}
+            <ul>
+
+            	{%for player in players%}
+            	<li> {{player}} </li>
+            	{%endfor%}
+            {%else%}
+            	<p>Well English footballers are the best. that's it. </p>
+            {%endif%}
+            <img src="./static/griezmann.jpeg" width="230" height="217">
+            <img src="./static/dele.jpeg" width="290" height="217">
+             </ul>
+         </div>
         </body>
     </html>
 
